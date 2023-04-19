@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{%block title%}
+staff details
+{%endblock%}
+{%block content%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'css\staffdetail.css' %}">
+
+<br><br><br><br><br><br><br>
+<div id="head"><h1 id="heading">all staffs of gasc </h1></div>
+<br><br>
+<div id="container">
+   
+    {% for i in dict_staff %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{i.staff_image.url}}" class="card-img-top" title="{{i.staff_name}}" >
+        <div class="card-body">
+          <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.staff_name}} </h3>
+          <p class="card-text text-center">Dept:{{i.depts}}</p>
+        </div>
+      </div>
+
+    {% endfor %}
+</div>
+<br>
+<div id="head"><h1 id="heading">hod details</h1></div>
+<br><br>
+<div id="container2">
+    {%for i in hods%}
+    <div class="card" style="width: 18rem;">
+        <img src="{{i.hod_image.url}}" class="card-img-top" title="{{i.hod_name}}" >
+        <div class="card-body">
+          <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.hod_name}}</h3>
+          <p class="card-text text-center">Dept:{{i.depts}}</p>
+        </div>
+      </div>
+    {%endfor%}
+</div>
+{%endblock%}

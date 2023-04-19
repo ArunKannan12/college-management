@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href=" {% static 'css\student details.css' %}  ">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<a href="{% url 'studentsdetails' %}"><i class="fa fa-regular fa-backward fa-fade"style="height:50px;width:100px;margin-left:100px;margin-top:50px;">Go-back</i></a>
+<div id="head">student details</div>
+<br><br>
+  <p id="count" style="text-align:center;font-size:25px;text-transform:capitalize;" > total number of students = {{students_length}}</p><br>
+  <div id="search">
+    <form action="" method='GET' id="form" >
+      {% csrf_token %}
+      <input type="search" name="q" id="searchbar" placeholder="search students">
+      <button type="submit" id="searchbutton"><i class="fa fa-magnifying-glass fa-fade fa-solid" style="color:#2c74f2"></i></button>
+    </form>
+  </div><br><br>
+ <div id="detail-container">
+  {% include 'messages.html' %}
+  {% for i in bca %}
+  <div class="card" style="width: 18rem;">
+    <img src="{{i.imageURL}}" class="card-img-top" title="{{i.firstname}} {{i.lastname}}" >
+    <div class="card-body">
+      <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.firstname}} {{i.lastname}} </h3>
+      <p class="card-text text-center">Dept:{{i.courses_available}}</p>
+      <p class="card-text text-center">Gender:{{i.gender}}</p>
+      <p class="card-text text-center">D.O.B:{{i.date_of_birth}}</p>
+      <p class="card-text ">Email:{{i.email}}</p>
+      <p class="card-text text-center">Phone:{{i.phone}}</p>
+      
+    </div>
+  </div>
+{% endfor %}
+{% for i in bsc_geo %}
+<div class="card" style="width: 18rem;">
+  <img src="{{i.imageURL}}" class="card-img-top" title="{{i.firstname}} {{i.lastname}}" >
+  <div class="card-body">
+    <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.firstname}} {{i.lastname}} </h3>
+    <p class="card-text text-center">Dept:{{i.courses_available}}</p>
+    <p class="card-text text-center">Gender:{{i.gender}}</p>
+    <p class="card-text text-center">D.O.B:{{i.date_of_birth}}</p>
+    <p class="card-text ">Email:{{i.email}}</p>
+    <p class="card-text text-center">Phone:{{i.phone}}</p>
+    
+  </div>
+</div>
+{% endfor %}
+{% for i in bsc_micro %}
+<div class="card" style="width: 18rem;">
+  <img src="{{i.imageURL}}" class="card-img-top" title="{{i.firstname}} {{i.lastname}}" >
+  <div class="card-body">
+    <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.firstname}} {{i.lastname}} </h3>
+    <p class="card-text text-center">Dept:{{i.courses_available}}</p>
+    <p class="card-text text-center">Gender:{{i.gender}}</p>
+    <p class="card-text text-center">D.O.B:{{i.date_of_birth}}</p>
+    <p class="card-text ">Email:{{i.email}}</p>
+    <p class="card-text text-center">Phone:{{i.phone}}</p>
+    
+  </div>
+</div>
+{% endfor %}
+{% for i in bsc_cs %}
+<div class="card" style="width: 18rem;">
+  <img src="{{i.imageURL}}" class="card-img-top" title="{{i.firstname}} {{i.lastname}}" >
+  <div class="card-body">
+    <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.firstname}} {{i.lastname}} </h3>
+    <p class="card-text text-center">Dept:{{i.courses_available}}</p>
+    <p class="card-text text-center">Gender:{{i.gender}}</p>
+    <p class="card-text text-center">D.O.B:{{i.date_of_birth}}</p>
+    <p class="card-text ">Email:{{i.email}}</p>
+    <p class="card-text text-center">Phone:{{i.phone}}</p>
+    
+  </div>
+</div>
+{% endfor %}
+{% for i in bsc_physics %}
+<div class="card" style="width: 18rem;">
+  <img src="{{i.imageURL}}" class="card-img-top" title="{{i.firstname}} {{i.lastname}}" >
+  <div class="card-body">
+    <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.firstname}} {{i.lastname}} </h3>
+    <p class="card-text text-center">Dept:{{i.courses_available}}</p>
+    <p class="card-text text-center">Gender:{{i.gender}}</p>
+    <p class="card-text text-center">D.O.B:{{i.date_of_birth}}</p>
+    <p class="card-text ">Email:{{i.email}}</p>
+    <p class="card-text text-center">Phone:{{i.phone}}</p>
+    
+  </div>
+</div>
+{% endfor %}
+{% for i in bsc_maths %}
+<div class="card" style="width: 18rem;">
+  <img src="{{i.imageURL}}" class="card-img-top" title="{{i.firstname}} {{i.lastname}}" >
+  <div class="card-body">
+    <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.firstname}} {{i.lastname}} </h3>
+    <p class="card-text text-center">Dept:{{i.courses_available}}</p>
+    <p class="card-text text-center">Gender:{{i.gender}}</p>
+    <p class="card-text text-center">D.O.B:{{i.date_of_birth}}</p>
+    <p class="card-text ">Email:{{i.email}}</p>
+    <p class="card-text text-center">Phone:{{i.phone}}</p>
+    
+  </div>
+</div>
+{% endfor %}
+{% for i in bcom_it %}
+<div class="card" style="width: 18rem;">
+  <img src="{{i.imageURL}}" class="card-img-top" title="{{i.firstname}} {{i.lastname}}" >
+  <div class="card-body">
+    <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.firstname}} {{i.lastname}} </h3>
+    <p class="card-text text-center">Dept:{{i.courses_available}}</p>
+    <p class="card-text text-center">Gender:{{i.gender}}</p>
+    <p class="card-text text-center">D.O.B:{{i.date_of_birth}}</p>
+    <p class="card-text ">Email:{{i.email}}</p>
+    <p class="card-text text-center">Phone:{{i.phone}}</p>
+    
+  </div>
+</div>
+{% endfor %}
+{% for i in bcom_ca %}
+<div class="card" style="width: 18rem;">
+  <img src="{{i.imageURL}}" class="card-img-top" title="{{i.firstname}} {{i.lastname}}" >
+  <div class="card-body">
+    <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.firstname}} {{i.lastname}} </h3>
+    <p class="card-text text-center">Dept:{{i.courses_available}}</p>
+    <p class="card-text text-center">Gender:{{i.gender}}</p>
+    <p class="card-text text-center">D.O.B:{{i.date_of_birth}}</p>
+    <p class="card-text ">Email:{{i.email}}</p>
+    <p class="card-text text-center">Phone:{{i.phone}}</p>
+    
+  </div>
+</div>
+{% endfor %}
+{% for i in bcom %}
+<div class="card" style="width: 18rem;">
+  <img src="{{i.imageURL}}" class="card-img-top" title="{{i.firstname}} {{i.lastname}}" >
+  <div class="card-body">
+    <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.firstname}} {{i.lastname}} </h3>
+    <p class="card-text text-center">Dept:{{i.courses_available}}</p>
+    <p class="card-text text-center">Gender:{{i.gender}}</p>
+    <p class="card-text text-center">D.O.B:{{i.date_of_birth}}</p>
+    <p class="card-text ">Email:{{i.email}}</p>
+    <p class="card-text text-center">Phone:{{i.phone}}</p>
+    
+  </div>
+</div>
+{% endfor %}
+{% for i in bcom_it %}
+<div class="card" style="width: 18rem;">
+  <img src="{{i.imageURL}}" class="card-img-top" title="{{i.firstname}} {{i.lastname}}" >
+  <div class="card-body">
+    <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.firstname}} {{i.lastname}} </h3>
+    <p class="card-text text-center">Dept:{{i.courses_available}}</p>
+    <p class="card-text text-center">Gender:{{i.gender}}</p>
+    <p class="card-text text-center">D.O.B:{{i.date_of_birth}}</p>
+    <p class="card-text ">Email:{{i.email}}</p>
+    <p class="card-text text-center">Phone:{{i.phone}}</p>
+    
+  </div>
+</div>
+{% endfor %}
+{% for i in bcom_it %}
+<div class="card" style="width: 18rem;">
+  <img src="{{i.imageURL}}" class="card-img-top" title="{{i.firstname}} {{i.lastname}}" >
+  <div class="card-body">
+    <h3 class="card-title text-center" style="text-transform:capitalize;">{{i.firstname}} {{i.lastname}} </h3>
+    <p class="card-text text-center">Dept:{{i.courses_available}}</p>
+    <p class="card-text text-center">Gender:{{i.gender}}</p>
+    <p class="card-text text-center">D.O.B:{{i.date_of_birth}}</p>
+    <p class="card-text ">Email:{{i.email}}</p>
+    <p class="card-text text-center">Phone:{{i.phone}}</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+{% endfor %}
+</div> 
+{% include 'footer.html' %}
+{% endblock content %}
+
+
+
+

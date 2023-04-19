@@ -1,0 +1,134 @@
+{%extends 'base.html' %}
+{%block title%}
+Home
+{%endblock%}
+{%block content%}
+{% load static %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href=" {% static 'css\homestyle.css' %} ">
+{% comment %} <marquee id="marquee" behavior="sticky" scrollamount='17' direction="">welcome to gudalur arts and science college.</marquee> {% endcomment %}
+{% include 'messages.html' %}
+<div id="container">
+    
+    <div id="item1">
+        <img src=" {% static 'images\Govt-Arts-Gudalur.jpg' %} " alt="" style="width:500px">
+    </div>
+    
+</div>
+<div id="container2">
+    <table id="table1" cellspacing="20">
+        <tr>
+            <th colspan="2" id="heading" ><h1>college details</h1></th>
+        </tr>
+        <tr>
+            <th id="first">name and address of the college</th>
+            <th id="first">government arts and science college,gudalur-643212</th>
+        </tr>
+        <tr>
+            <th id="">college code</th>
+            <td id="">1021012 </td>
+        </tr>
+        <tr>
+            <th id="first">district</th>
+            <td id="first">the nilgiris</td>
+        </tr>
+        <tr>
+            <th id="" >region</th>
+            <td id="">coimbatore</td>
+        </tr>
+        <tr>
+            <th id="first">phnone.no</th>
+            <td id="first">04262-264004</td>
+        </tr>
+        <tr>
+            <th id="">website address</th>
+            <td id="">gascgudalur.com</td>
+        </tr>
+        <tr>
+            <th id="first">whether the college is co-ed/women</th>
+            <td id="first">co-education</td>
+        </tr>
+    </table>
+</div>
+<div id="container3">
+    <h1 id="courses">ug degree courses offered</h1>
+    <p id="details">Our college has a number of courses to offer at the under-graduate as well as post-graduate level. While the under-graduate courses consist of BBM, B.Com and BCA, students may pursue M.Com at the post-graduate level. Students can also choose from different elective subjects offered within these courses as per their interests. These mainstream courses are conducted as per the Bharathiyar University curriculum with the aim of imparting the best academic education to our pupils. Additional value-added programs are also conducted by various departments, forums and committees with the intention of further bolstering the future prospects of our students.</p>
+    <table id="table2" cellspacing="20">
+        <tr>
+            <th id="heading">s.no</th>
+            <th id="heading">course code</th>
+            <th id="heading">major subject</th>
+        </tr>
+        <tr>
+            <th id="first">1</th>
+            <th id="first">LENE1</th>
+            <th id="first">b.a english literature</th>
+        </tr>
+        <tr>
+            <th id="second">2</th>
+            <th id="second">abse1</th>
+            <th id="second">bsw</th>
+        </tr>
+        <tr>
+            <th id="first">3</th>
+            <th id="first">cbae1</th>
+            <th id="first">bba.ca</th>
+        </tr>
+        <tr>
+            <th id="second">4</th>
+            <th id="second">cape1</th>
+            <th id="second">b.b.a business administration</th>
+        </tr>
+        <tr>
+            <th id="first">5</th>
+            <th id="first">ccoe1</th>
+            <th id="first">b.com</th>
+        </tr>
+        <tr>
+            <th id="second">6</th>
+            <th id="second">ccae1</th>
+            <th id="second">b.com ca</th>
+        </tr>
+        <tr>
+            <th id="first">7</th>
+            <th id="first">cite1</th>
+            <th id="first">b.com it</th>
+        </tr>
+        <tr>
+            <th id="second">8</th>
+            <th id="second">smae1</th>
+            <th id="second">b.sc.mathematics</th>
+        </tr>
+        <tr>
+            <th id="first">9</th>
+            <th id="first">sphe1</th>
+            <th id="first" >b.sc.physics</th>
+        </tr>
+        <tr>
+            <th id="second">10</th>
+            <th id="second">scse1</th>
+            <th id="second">b.sc.computer science</th>
+        </tr>
+        <tr>
+            <th id="first">11</th>
+            <th id="first">scae1</th>
+            <th id="first">bca</th>
+        </tr>
+        <tr>
+            <th id="second" >12</th>
+            <th id="second">smbe1</th>
+            <th id="second">b.sc.microbiology</th>
+        </tr>
+        <tr>
+            <th id="first">13</th>
+            <th id="first">sgee1</th>
+            <th id="first">b.sc.geography</th>
+        </tr>
+    </table>
+</div>
+<br><br>
+
+
+
+{%endblock%}

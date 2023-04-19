@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{%block title%}
+Students details
+{%endblock%}
+{%block content%}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/student details.css' %}">
+
+<div id="container" style="">
+  <p class="paragraph">select department</p>
+  <div id="item">
+  <a href="{% url 'bca' %}"><div class="drop-down">bca </div></a>
+  <a href="{% url 'bscgeo' %}"><div class="drop-down ">bsc geography</div></a>
+  <a href="{% url 'bscmicro' %}"><div class="drop-down">bsc microbiology</div></a>
+  <a href="{% url 'bsccs' %}"><div class="drop-down drop">bsc computer science</div></a>
+  <a href="{% url 'bscphysics' %}"><div class="drop-down">bsc physics</div></a>
+  <a href="{% url 'bscmaths' %}"><div class="drop-down">bsc maths</div></a>
+  <a href="{% url 'bcomit' %}"><div class="drop-down">b.com it</div></a>
+  <a href="{% url 'bcomca' %}"><div class="drop-down">b.com ca</div></a>
+  <a href="{% url 'bcom' %}"><div class="drop-down">bcom</div></a>
+  </div>
+</div> 
+{% include 'footer.html' %}
+{%endblock%}
