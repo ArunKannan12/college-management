@@ -28,7 +28,6 @@
 }
 #table1 #heading{
     text-align: center;
-   
     color: white;
     text-transform: capitalize;
 
@@ -54,7 +53,7 @@ tr .first{
 }
 tr .second{
     height: 40px;
-    width: 250px;
+    width: 200px;
     border: solid 1px;
     text-align: center;
     text-transform: uppercase;
@@ -77,4 +76,23 @@ tr .second{
     letter-spacing: 1px;
     word-spacing: 2px;
     margin: 10px;
+}
+#container #item{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+#item table{
+    margin: 20px;
+}
+tr .heading{
+    background-color:#00CED1;
+    text-align: center;
+    height: 50px;
+    border: groove 1px black;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    word-spacing:2px ;
+
 }

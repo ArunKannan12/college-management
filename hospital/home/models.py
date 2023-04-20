@@ -45,6 +45,9 @@ class admission(models.Model):
         except:
             URL=''
         return URL
-# class photo(models.Model):
-#     image=models.ImageField(upload_to='sample_images', height_field=None, width_field=None, max_length=None,null=True,blank=True)
-    
+class Feedback(models.Model):
+    name=models.CharField(max_length=50,null=False,blank=True)
+    dept=models.ForeignKey(departments, on_delete=models.CASCADE,blank=False,null=True)
+    feedback=models.TextField(max_length=500,null=True,blank=True)
+    def __str__(self):
+        return self.name

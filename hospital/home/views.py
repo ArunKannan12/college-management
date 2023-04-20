@@ -83,7 +83,18 @@ def staffdetails(request):
     }
     return render(request,'staff details.html',detail)
 def about(request):
-    return render(request,'about.html')
+    form=Feedbackform()
+    if request.method == 'POST':
+        form=Feedbackform(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request,"feedback send successfully")
+            return redirect('about')
+    context={
+        'form':form
+    }
+    
+    return render(request,'about.html',context)
 def addstudents(request):
     form=stadm()
     if request.method == 'POST':

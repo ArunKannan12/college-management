@@ -28,3 +28,9 @@ class CustomUserForm(UserCreationForm):
     class Meta:
         model=User
         fields=['username','email','password1','password2']
+class Feedbackform(ModelForm):
+    name=forms.CharField(required=True ,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'enter your name'}))
+    feedback=forms.CharField(required=True ,widget=forms.Textarea(attrs={'class':'form-control','placeholder':'type your feedback'}))
+    class Meta:
+        model=Feedback
+        fields=['name','dept','feedback']
