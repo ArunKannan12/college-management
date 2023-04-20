@@ -1,10 +1,13 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.images{
+    width: 1000px;
 }
-#carouselExampleAutoplaying{
-   margin-left: 50%;
-   
-    
-}
+#carousel #carouselitem{
+    display: flex;
+    justify-content: center;
+    /* height: 600px;  
+    width: 100%; */
+ }
+ /*#carousel{
+    position: relative;
+    bottom: 16px;
+} */

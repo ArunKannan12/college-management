@@ -42,7 +42,40 @@ def logoutpage(request):
 def base(request):
     return render(request,'base.html')
 def home(request):
-    return render(request,'home.html')
+    bca=admission.objects.filter(courses_available='BCA')
+    bca_length=len(bca)
+    bsc_geo=admission.objects.filter(courses_available='B.SC.GEOGRAPHY')
+    bsc_geo_length=len(bsc_geo)
+    bsc_micro=admission.objects.filter(courses_available='B.SC.MICROBIOLOGY')
+    bsc_micro_length=len(bsc_micro)
+    bsc_cs=admission.objects.filter(courses_available='B.SC.COMPUTER SCIENCE')
+    bsc_cs_length=len(bsc_cs)
+    bsc_physics=admission.objects.filter(courses_available='B.SC.PHYSICS')
+    bsc_physics_length=len(bsc_physics)
+    bsc_maths=admission.objects.filter(courses_available='B.SC.MATHEMATICS')
+    bsc_maths_length=len(bsc_maths)
+    bcom_it=admission.objects.filter(courses_available='B.COM IT')
+    bcom_it_length=len(bcom_it)
+    bcom_ca=admission.objects.filter(courses_available='B.COM CA')
+    bcom_ca_length=len(bcom_ca)
+    bcom=admission.objects.filter(courses_available='B.COM')
+    bcom_length=len(bcom)
+    total=admission.objects.all()
+    student_length=len(total)
+    context={
+        'bca_length':bca_length,
+        'bsc_geo_length':bsc_geo_length,
+        'bsc_micro_length':bsc_micro_length,
+        'bsc_cs_length':bsc_cs_length,
+        'bsc_physics_length':bsc_physics_length,
+        'bsc_maths_length':bsc_maths_length,
+        'bcom_it_length':bcom_it_length,
+        'bcom_ca_length':bcom_ca_length,
+        'bcom_length':bcom_length,
+        'student_length':student_length
+    }
+    return render(request,'home.html',context)
+
 def staffdetails(request):
     detail={
         'dict_staff':staffdetail.objects.all(),
@@ -67,31 +100,8 @@ def addstudents(request):
     
     return render(request,'add students.html',context)
 def studentsdetails(request):
-    # bca=admission.objects.filter(courses_available='BCA')
-    # if 'q' in request.GET:
-    #     q=request.GET['q']
-    #     data=admission.objects.filter(firstname__icontains=q)
-    # else:
-    #     data=admission.objects.all()
-    # students_length=len(data)
-    # context={
-    #     'data':data,'students_length':students_length,'bca':bca
-    # }
+   
     return render(request,'students details.html')
-# def uploadphoto(request):
-#     form=imageupload()
-#     if request.method == 'POST':
-#         form=imageupload(request.POST,request.FILES)
-#         if form.is_valid():
-#             form.save()
-    
-#     else:
-#         form=imageupload()
-#     context={
-#         'form':form
-#         }   
-#     print(form)
-#     return render(request,"sample.html",context)
 def BCA(request):
     bca=admission.objects.filter(courses_available='BCA')
     if 'q' in request.GET:

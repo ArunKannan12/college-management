@@ -38,7 +38,7 @@ a{
 }
 .navbar .links{
     display: flex;
-    gap: 10px;
+    gap: 5px;
     text-transform: capitalize;
 }
 .links li a{
@@ -72,7 +72,7 @@ a{
 
 }
 .dropdownmenu li{
-    padding: 0.5rem;
+    padding: 0.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
