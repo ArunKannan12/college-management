@@ -1,48 +1,57 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-#container2 #item{
+
+#container2 #item {
     display: flex;
     /* justify-content:center; */
     align-items: center;
     margin: 10px;
 }
-#container3 #item{
+
+#container3 #item {
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-#item #table1{
+
+#item #table1 {
     height: 300px;
     width: 500px;
-    margin:10px;
+    margin: 10px;
 }
-#item #table2{
+
+#item #table2 {
     height: 300px;
     width: 80%;
-    margin-top: 30px;;
+    margin-top: 30px;
+    ;
 }
-#table1 #heading{
+
+#table1 #heading {
     text-align: center;
     color: white;
     text-transform: capitalize;
 
 }
-#table2 #heading{
+
+#table2 #heading {
     text-align: center;
     background-color: #f15a55;
-    color:white;
+    color: white;
     text-transform: capitalize;
 }
-tr #heading{
+
+tr #heading {
     height: 50px;
-    border:solid 1px black;
+    border: solid 1px black;
 }
-tr .first{
+
+tr .first {
     height: 50px;
     width: 300px;
     border: solid 1px;
@@ -51,7 +60,8 @@ tr .first{
     letter-spacing: 1PX;
     word-spacing: 3px;
 }
-tr .second{
+
+tr .second {
     height: 40px;
     width: 200px;
     border: solid 1px;
@@ -60,39 +70,63 @@ tr .second{
     letter-spacing: 1PX;
     word-spacing: 3px;
 }
-.details .detail,#courses{
+
+.details .detail,
+#courses {
     text-transform: capitalize;
-    font-size:30px ;
+    font-size: 30px;
     word-spacing: 2px;
     letter-spacing: 2px;
-  
+
 }
-.details,#courses{
+
+.details,
+#courses {
     border-bottom: solid 2px tomato;
     height: 50px;
 }
-#details{
+
+#details {
     font-size: 20px;
     letter-spacing: 1px;
     word-spacing: 2px;
     margin: 10px;
 }
-#container #item{
+
+#container #item {
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
 }
-#item table{
+
+#item table {
     margin: 20px;
 }
-tr .heading{
-    background-color:#00CED1;
+
+tr .heading {
+    background-color: #00CED1;
     text-align: center;
     height: 50px;
     border: groove 1px black;
     color: white;
     text-transform: capitalize;
     letter-spacing: 2px;
-    word-spacing:2px ;
+    word-spacing: 2px;
 
+}
+
+@media(max-width:768px) {
+
+
+    
+}
+
+@media (max-width:365px) {
+    
+
+    #container {
+        position: relative;
+        bottom: 100px;
+       
+    }
 }

@@ -9,12 +9,13 @@ Home
 <link rel="stylesheet" href=" {% static 'css\homestyle.css' %} ">
 
 {% include 'messages.html' %}
+<br>
     {% include 'slider.html' %}
     <br>
-<div id="container">
+{% comment %} <div id="container" >
     <p id="courses">total students={{student_length}}</p>
     <div id="item"><br>
-        <table>
+        <table style="overflow-x:auto;">
             <tr>
                 <th class="heading" colspan="7">science department</th>
             </tr>
@@ -59,7 +60,7 @@ Home
             </tr>
         </table> 
     </div>
-</div>
+</div> {% endcomment %}
 <div class="details"><p class="detail">college details</p></div>
 <div id="container2">
    
