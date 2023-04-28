@@ -5,9 +5,12 @@ Students details
 {%block content%}
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/student details.css' %}">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<p class="paragraph text-center">select department</p>
 <div id="container" style="">
-  <p class="paragraph">select department</p>
+  
   <div id="item">
   <a href="{% url 'bca' %}"><div class="drop-down">bca </div></a>
   <a href="{% url 'bscgeo' %}"><div class="drop-down ">bsc geography</div></a>
@@ -20,5 +23,5 @@ Students details
   <a href="{% url 'bcom' %}"><div class="drop-down">bcom</div></a>
   </div>
 </div> 
-{% include 'footer.html' %}
+
 {%endblock%}

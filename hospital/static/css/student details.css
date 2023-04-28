@@ -9,6 +9,11 @@
     font-size: 30px;
     margin: 30px;
 }
+#container{
+    display: flex;
+    justify-content: center;
+    
+}
 #container #item{
     display: flex;
     flex-wrap: wrap;
@@ -16,7 +21,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin-left:100px;
+    /* margin-left:100px; */
     width: 600px;
     height: 400px;
    
@@ -34,6 +39,15 @@
     font-weight: bold;
    
 }
+.drop-down:hover{
+    background-color: rgb(73, 184, 228);
+}
+.drop-down:active{
+    box-shadow: 3px 5px 2px #040000;
+    transform: translate(4px);
+
+}
+
 .drop{
     padding:0;
 }
