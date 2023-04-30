@@ -23,3 +23,34 @@
     letter-spacing: 2px;
     
 }
+@media(max-width:768px) {
+    #heading{
+        height: auto;
+        font-size: 25px;
+    }
+    #content{
+        font-size: 17px;
+    }
+}
+
+@media (max-width:365px) {
+    #heading{
+        height: auto;
+        font-size: 20px;
+    }
+    #content{
+        font-size: 15px;
+    }
+    #feedback{
+        font-size: 10px;
+       
+        margin-right: 10px;
+    }
+    form{
+        margin-right: 20px;
+       
+    }
+    
+}
+
+   

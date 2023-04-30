@@ -85,3 +85,20 @@
     border-radius: 10px;
     margin-left: 10px;
 }
+@media(max-width:768px){
+    form #searchbar{
+       
+        width: 300px;
+        float: left;
+        height:50px;
+    }
+}
+@media (max-width:365px){
+    form #searchbar{
+       
+        width: 120px;
+        float: left;
+        height:40px;
+    }
+    
+}

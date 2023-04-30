@@ -4,30 +4,29 @@
 login{% endblock title %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/loginpage.css' %}">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<div class="container" style="margin-top:10px;height:500px;">
+
+<div class="container" style="margin-top:10px;height:100vh;">
     <div class="row">
         <div class="col-12">
-            <h2 class="mb-3 text-center" style=" font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;text-transform:capitalize;
-        ">college management</h2>
+            <h2 class="mb-3 text-center" style=" font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;text-transform:capitalize;">college management</h2>
             <h4 class="mb-3">Login</h4>
             <hr style="border-color:#b8bfc2">
-           {% comment %} {% include 'messages.html' %} {% endcomment %}
+           {% comment %}  {% endcomment %}
         </div>
     </div>
             <section class="py-4">
                 <div class="container1">
                     <div class="row">
                         <div class="col-6">
-                            {% for msg in messages %}
+                            {% comment %} {% for msg in messages %}
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                 <p>{{msg}}</p>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                               </div>
-                            {% endfor %}
+                            {% endfor %} {% endcomment %}
+                            {% include 'messages.html' %}
                             <form action="" method="POST">
                                 {% csrf_token %}
                                <div class="mb-4">

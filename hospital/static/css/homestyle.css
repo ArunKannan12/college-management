@@ -116,8 +116,14 @@ tr .heading {
 }
 
 @media(max-width:768px) {
-
-
+    #container3 #courses{
+       
+        height: auto;
+    }
+    #container4{
+       
+        margin-left: 20px;
+    }
     
 }
 
@@ -128,5 +134,13 @@ tr .heading {
         position: relative;
         bottom: 100px;
        
+    }
+    #container4{
+       
+        margin-left: 20px;
+    }
+    #container3 #courses{
+       
+        height: auto;
     }
 }
